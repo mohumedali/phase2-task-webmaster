@@ -17,7 +17,41 @@ body{
     width: 80%;
     margin: 0 auto;
 }
+a{
+    text-decoration: none;
+    color: var(--dark-color);
+}
+.brand a{
+    font-size: 25px;
+    font-weight: bold;
+}
+nav{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+
+}
+.nav-links :hover::before{
+    content: '';
+    position: absolute;
+    background-color: var(--main-color);
+    width: 40px;
+    height: 2px;
+    bottom: -4px;
+}
+li{
+    list-style: none;
+}
 .home{
+    z-index: 1;
     position: relative;
     height: 100vh;
     background-image: url(../images/IMG-20250717-WA0004.jpg);
@@ -276,6 +310,13 @@ footer > div{
     .design-sec .design-sec-images{
     justify-content: center; 
 }}
-
+@media (max-width:500px){
+    nav{
+        flex-direction: column;
+    }
+    .nav-links{
+        margin-top: 10px;
+    }
+}
 
 /* end form sec */
